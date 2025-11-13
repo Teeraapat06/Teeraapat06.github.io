@@ -1,146 +1,130 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | Teerapat Chantra</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Teerapat Chantra</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap');
-    * {
+    body {
+      font-family: "Prompt", sans-serif;
+      background-color: #f5f7fa;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: 'Prompt', sans-serif;
-    }
-    body {
-      background: #f5f7fa;
       color: #333;
-      line-height: 1.6;
-      padding: 40px 10px;
     }
     .container {
-      max-width: 900px;
-      margin: auto;
+      max-width: 850px;
+      margin: 50px auto;
       background: #fff;
       padding: 40px;
       border-radius: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
     h1, h2 {
       color: #0a66c2;
     }
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
+    p {
+      line-height: 1.8;
     }
-    h2 {
-      margin-top: 30px;
-      border-bottom: 2px solid #0a66c2;
-      padding-bottom: 5px;
+    .profile-photo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 25px;
     }
-    p, li {
-      margin: 8px 0;
-      font-size: 16px;
+    .profile-photo img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #0a66c2;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
-    ul {
-      list-style: none;
-      padding-left: 10px;
+    .section {
+      margin-bottom: 30px;
     }
-    ul li::before {
-      content: "• ";
-      color: #0a66c2;
-    }
-    a {
+    .contact a {
       color: #0a66c2;
       text-decoration: none;
     }
-    a:hover {
-      text-decoration: underline;
+    .skills, .projects, .activities {
+      list-style: none;
+      padding-left: 0;
     }
-    .section {
-      margin-top: 25px;
-    }
-    .skills, .contact {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .tag {
-      background: #e3f2fd;
-      color: #0a66c2;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 15px;
+    .skills li, .projects li, .activities li {
+      background: #eef3f8;
+      margin: 8px 0;
+      padding: 10px 15px;
+      border-radius: 10px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Portfolio | นายธีรภัทร์ จันทรา (Teerapat Chantra)</h1>
 
-    <div class="section">
-      <h2>1. แนะนำตัว (Introduction / Profile)</h2>
-      <p>สวัสดีครับ ผมชื่อ <b>นายธีรภัทร์ จันทรา (Teerapat Chantra)</b></p>
-      <p>กำลังศึกษาที่ <b>คณะวิทยาศาสตร์ สาขาเทคโนโลยีสารสนเทศ</b></p>
-      <p>มหาวิทยาลัยราชภัฏอุดรธานี ชั้นปีที่ 2</p>
-      <p>สนใจด้าน <b>Web Development</b> และ <b>Artificial Intelligence (AI)</b></p>
+    <!-- รูปโปรไฟล์ -->
+    <div class="profile-photo">
+      <img src="IMG_9366.jpg" alt="Teerapat Chantra">
     </div>
 
+    <!-- แนะนำตัว -->
     <div class="section">
-      <h2>2. ทักษะ (Skills)</h2>
-      <div class="skills">
-        <span class="tag">HTML</span>
-        <span class="tag">AI</span>
-        <span class="tag">SQL</span>
-        <span class="tag">Git</span>
-        <span class="tag">VS Code</span>
-        <span class="tag">Figma</span>
-        <span class="tag">สื่อสารได้</span>
-        <span class="tag">ทำงานเป็นทีม</span>
-        <span class="tag">แก้ไขปัญหาได้</span>
-      </div>
+      <h1>นายธีรภัทร์ จันทรา (Teerapat Chantra)</h1>
+      <p>นักศึกษาคณะวิทยาศาสตร์ สาขาเทคโนโลยีสารสนเทศ มหาวิทยาลัยราชภัฏอุดรธานี</p>
+      <p>ปัจจุบันศึกษาชั้นปีที่ 2 สนใจด้าน <b>Web Development</b> และ <b>AI</b></p>
     </div>
 
+    <!-- ทักษะ -->
     <div class="section">
-      <h2>3. ผลงานที่ผ่านมา (Projects / Portfolio)</h2>
-      <ul>
-        <li>🤖 AI Project</li>
-        <li>🎮 ระบบเกม (Game System)</li>
-        <li>🗳️ ระบบโหวต (Voting System)</li>
-        <li>🔢 ระบบสุ่มเลข (Random Number System)</li>
-        <li>🏪 ออกแบบแอปร้านค้า (Shop App Design) ด้วย Figma</li>
+      <h2>ทักษะ</h2>
+      <ul class="skills">
+        <li>HTML / SQL / AI / Git / VS Code / Figma</li>
+        <li>สามารถสื่อสาร ทำงานเป็นทีม และแก้ไขปัญหาได้</li>
       </ul>
-      <p>GitHub: <a href="https://github.com/Teeraapat06" target="_blank">https://github.com/Teeraapat06</a></p>
     </div>
 
+    <!-- ผลงาน -->
     <div class="section">
-      <h2>4. การศึกษา (Education)</h2>
-      <p><b>คณะวิทยาศาสตร์ สาขาเทคโนโลยีสารสนเทศ</b></p>
-      <p>มหาวิทยาลัยราชภัฏอุดรธานี</p>
-      <p>พ.ศ. 2567 – ปัจจุบัน</p>
+      <h2>ผลงานที่เคยทำ</h2>
+      <ul class="projects">
+        <li>🎮ระบบเกม</li>
+        <li>🗳️ระบบโหวต</li>
+        <li>🔢ระบบสุ่มเลข</li>
+        <li>🏪ออกแบบแอปร้านค้าใน Figma</li>
+      </ul>
     </div>
 
+    <!-- การศึกษา -->
     <div class="section">
-      <h2>5. กิจกรรมและผลงานอื่น ๆ (Activities / Achievements)</h2>
-      <ul>
+      <h2>การศึกษา</h2>
+      <p>จบจากโรงเรียนชุมพลโพนพิสัย<br>
+      <p>ปัจจุบันศึกษาคณะวิทยาศาสตร์ สาขาเทคโนโลยีสารสนเทศ<br>
+      มหาวิทยาลัยราชภัฏอุดรธานี</p>
+    </div>
+
+    <!-- กิจกรรม -->
+    <div class="section">
+      <h2>กิจกรรม / รางวัล</h2>
+      <ul class="activities">
         <li>ผู้เข้าร่วมอบรม Startup Coaching Camp</li>
         <li>เข้าร่วมแข่งขัน UDRU Pro League ROV</li>
       </ul>
     </div>
 
-    <div class="section">
-      <h2>6. ติดต่อ (Contact)</h2>
-      <div class="contact">
-        <p>📧 Email: <a href="mailto:67040233102@udru.ac.th">67040233102@udru.ac.th</a></p>
-        <p>🐙 GitHub: <a href="https://github.com/Teeraapat06" target="_blank">Teerapat06</a></p>
-        <p>📘 Facebook: <a href="https://www.facebook.com/bas.teerapat.984509" target="_blank">Teerapat Chantra</a></p>
-        <p>📍 จังหวัดอุดรธานี</p>
-      </div>
+    <!-- ติดต่อ -->
+    <div class="section contact">
+      <h2>ช่องทางติดต่อ</h2>
+      <p>
+        📧 Email: <a href="mailto:67040233102@udru.ac.th">67040233102@udru.ac.th</a><br>
+        💻 GitHub: <a href="https://github.com/Teeraapat06" target="_blank">github.com/Teeraapat06</a><br>
+        📘 Facebook: <a href="https://www.facebook.com/bas.teerapat.984509" target="_blank">facebook.com/bas.teerapat.984509</a><br>
+        📍 จังหวัดอุดรธานี
+      </p>
     </div>
 
+    <!-- เป้าหมาย -->
     <div class="section">
-      <h2>7. เป้าหมายในอนาคต (Career Interest / Future Goals)</h2>
-      <p>อยากทำงานด้าน <b>การออกแบบแอปพลิเคชัน</b>, <b>เว็บไซต์</b>, <b>โปสเตอร์</b> และพัฒนา <b>AI</b> เพื่อช่วยเพิ่มประสิทธิภาพการทำงานในอนาคต</p>
+      <h2>เป้าหมายในอนาคต</h2>
+      <p>อยากทำงานด้านการออกแบบแอป เว็บไซต์ โปสเตอร์ และพัฒนา AI</p>
     </div>
 
   </div>
